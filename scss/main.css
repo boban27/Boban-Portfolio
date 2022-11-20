@@ -1,0 +1,461 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.home {
+  height: 100vh;
+  padding-top: 40vh;
+  overflow: hidden;
+  text-align: center;
+  align-items: center;
+  background: linear-gradient(to left, rgba(39, 39, 39, 0.9), rgba(39, 39, 39, 0.3)), url(../img/model-1.jpg) center top;
+  background-size: cover;
+}
+.home_name {
+  font-size: 2rem;
+  padding-bottom: 1rem;
+  margin-bottom: 1rem;
+  border-bottom: 2px solid #fff;
+}
+.home_name_last {
+  color: #ff652f;
+  font-weight: 700;
+}
+
+.menu-btn {
+  position: absolute;
+  z-index: 1;
+  right: 1rem;
+  top: 1rem;
+  height: 20px;
+  width: 28px;
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
+}
+.menu-btn_burger {
+  position: absolute;
+  right: 0;
+  top: 0.5rem;
+  width: 28px;
+  height: 3px;
+  background: #fff;
+  transition: all 0.5s ease-in-out;
+}
+.menu-btn_burger::before {
+  content: "";
+  position: absolute;
+  top: -8px;
+  width: 28px;
+  height: 3px;
+  background: #fff;
+  transition: all 0.5s ease-in-out;
+}
+.menu-btn_burger::after {
+  content: "";
+  position: absolute;
+  top: 8px;
+  width: 20px;
+  height: 3px;
+  background: #fff;
+  transition: all 0.5s ease-in-out;
+}
+.menu-btn_burger.open {
+  transform: rotate(720deg);
+  background: transparent;
+}
+.menu-btn_burger.open::before {
+  transform: rotate(45deg) translate(5px, 8px);
+}
+.menu-btn_burger.open::after {
+  width: 28px;
+  transform: rotate(-45deg) translate(3px, -7px);
+}
+
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  opacity: 0.98;
+  visibility: hidden;
+}
+.nav.open {
+  visibility: visible;
+}
+.nav .menu-nav {
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  overflow: hidden;
+  background: #272727;
+  list-style-type: none;
+  padding-right: 1rem;
+  transform: translateY(-100%);
+  transition: all 0.5s ease-in-out;
+}
+.nav .menu-nav.open {
+  transform: translateY(0);
+}
+.nav .menu-nav_item {
+  transform: translateX(100vw);
+  transition: all 0.5s ease-in-out;
+}
+.nav .menu-nav_item.open {
+  transform: translateX(0);
+}
+.nav .menu-nav_item.active > a {
+  color: #ff652f;
+}
+.nav .menu-nav_link {
+  display: inline-block;
+  font-size: 2rem;
+  text-transform: uppercase;
+  font-weight: 300;
+  padding: 2rem 0;
+  color: aliceblue;
+  transition: all 0.5s ease-in-out;
+}
+.nav .menu-nav_link:hover {
+  color: #ff652f;
+}
+
+.menu-nav_item:nth-child(1) {
+  transition-delay: 0.25s;
+}
+
+.menu-nav_item:nth-child(2) {
+  transition-delay: 0.35s;
+}
+
+.menu-nav_item:nth-child(3) {
+  transition-delay: 0.45s;
+}
+
+.menu-nav_item:nth-child(4) {
+  transition-delay: 0.55s;
+}
+
+.about {
+  padding-bottom: 2rem;
+}
+.about_bio-image {
+  height: 60vh;
+  width: 100%;
+  background: linear-gradient(to left, rgba(39, 39, 39, 0.9), rgba(39, 39, 39, 0.3)), url(../img/model-1.jpg) center top;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+}
+.about_bio-image p {
+  margin-bottom: 2rem;
+  font-size: 0.9rem;
+}
+.about_bio-image p .moto {
+  font-weight: 700;
+}
+.about_bio {
+  width: 80%;
+  text-align: center;
+}
+.about_bio .text-secondary {
+  padding-bottom: 1rem;
+}
+.about .scools {
+  width: 60vw;
+  margin: 2rem auto 0 auto;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 2rem;
+}
+.about .scools_scool {
+  background: #414141;
+  padding: 0.5rem;
+  border-bottom: 2px solid #ff652f;
+}
+.about .scools_scool .logo-img {
+  position: relative;
+  margin: 20px auto 25px auto;
+  width: 150px;
+  height: 150px;
+}
+.about .scools_scool h2, .about .scools_scool h2 {
+  margin: 0.5rem 0;
+}
+.about .scools_scool h6 {
+  margin: 0.3rem 0;
+}
+.about .socila-icon {
+  display: flex;
+  flex-direction: column;
+}
+.about footer {
+  transform: rotate(90deg) translate(-4rem, -4rem);
+}
+
+.project {
+  padding-bottom: 2rem;
+}
+.project_bio-image {
+  height: 50vh;
+  width: 100%;
+  background: linear-gradient(to left, rgba(39, 39, 39, 0.9), rgba(39, 39, 39, 0.3)), url(../img/model-1.jpg) center top;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+}
+.project_bio-image .text-secondary {
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+}
+.project h1 {
+  text-align: center;
+}
+.project p {
+  text-align: center;
+  font-size: 0.9rem;
+  margin-bottom: 2rem;
+}
+.project_items {
+  width: 60vw;
+  margin: 2rem auto 0 auto;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 2rem;
+}
+.project_item {
+  position: relative;
+  border-bottom: 5px solid #ff652f;
+  overflow: hidden;
+  cursor: pointer;
+}
+.project_item img {
+  width: 100%;
+}
+.project_item::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: #ff652f;
+  opacity: 0;
+  transition: all 0.5s ease-in-out;
+}
+.project_item:hover::after {
+  top: 0;
+  opacity: 0.9;
+}
+.project_item:hover .project_btn {
+  opacity: 1;
+}
+.project__btns {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  text-align: center;
+}
+.project_btn {
+  opacity: 0;
+  color: #000;
+  transition: all 0.5s ease-in-out;
+}
+.project_btn:hover {
+  color: #fff;
+}
+.project .socila-icon {
+  display: flex;
+  flex-direction: column;
+}
+.project footer {
+  transform: rotate(90deg) translate(-3rem, -4rem);
+}
+
+.contact {
+  height: 100vh;
+  padding-top: 40vh;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: linear-gradient(to left, rgba(39, 39, 39, 0.9), rgba(39, 39, 39, 0.3)), url(../img/model-1.jpg) center top;
+  background-size: cover;
+}
+.contact h2 {
+  font-size: 3rem;
+  margin-bottom: 2rem;
+}
+.contact_list {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 2rem;
+  font-size: 1.5rem;
+}
+.contact .socila-icon {
+  position: initial;
+  margin-top: 2rem;
+}
+
+@media screen and (min-width: 768px) {
+  .menu-btn {
+    visibility: hidden;
+  }
+  .nav {
+    visibility: visible;
+  }
+  .nav .menu-nav {
+    display: block;
+    transform: translateY(0);
+    height: 100%;
+    background: transparent;
+    text-align: right;
+  }
+  .nav .menu-nav_item {
+    display: inline;
+    padding-right: 1.5rem;
+  }
+  .nav .menu-nav_link {
+    font-size: 1.5rem;
+  }
+  .home footer {
+    font-size: 2rem;
+  }
+  .about_bio-image {
+    height: 100vh;
+  }
+  .about_bio {
+    font-size: 1.5rem;
+  }
+  .about_bio p {
+    font-size: 1.7rem;
+  }
+  .project_bio-image {
+    height: 100vh;
+  }
+  .project_bio {
+    margin-bottom: px;
+    width: 80%;
+  }
+  .project_bio p {
+    font-size: 1.7rem;
+  }
+  .project_items {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .project .text-secondary {
+    font-size: 3rem;
+  }
+  .contact_list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media screen and (min-width: 1024px) {
+  .project_items {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .home h2, .home h3 {
+    font-size: 2rem;
+  }
+  .home_name {
+    font-size: 6rem;
+  }
+  .home footer {
+    font-size: 1rem;
+  }
+  .contact_list {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .about footer {
+    transform: rotate(0deg) translate(-3rem, -1rem);
+  }
+  .about .socila-icon {
+    display: flex;
+    flex-direction: row;
+  }
+  .about .socila-icon a {
+    padding: 1rem;
+  }
+  .project footer {
+    transform: rotate(0deg) translate(-3rem, -1rem);
+  }
+  .project .socila-icon {
+    display: flex;
+    flex-direction: row;
+  }
+  .project .socila-icon a {
+    padding: 1rem;
+  }
+}
+@media screen and (min-width: 1600px) {
+  .project_bio-image {
+    height: 80vh;
+  }
+  .about_bio_bio-image {
+    height: 80vh;
+  }
+}
+body {
+  background-color: #272727;
+  color: #fff;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1;
+}
+
+h1, h2, h3 {
+  font-weight: 400;
+}
+
+a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.text-secondary {
+  color: #ff652f;
+}
+
+header {
+  position: fixed;
+  z-index: 2;
+  width: 100%;
+  padding: 1rem;
+}
+
+main {
+  width: 100%;
+  height: 100%;
+}
+main .socila-icon {
+  position: fixed;
+  bottom: 1rem;
+  left: 1rem;
+}
+main .socila-icon a {
+  padding: 0.4rem;
+  transition: all 0.5s ease-in-out;
+}
+main .socila-icon a:hover {
+  color: #ff652f;
+}
+
+footer {
+  font-size: 1rem;
+  position: fixed;
+  bottom: 0.4rem;
+  right: 1rem;
+  text-align: right;
+  color: #fff;
+}/*# sourceMappingURL=main.css.map */

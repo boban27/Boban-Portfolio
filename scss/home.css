@@ -1,0 +1,9 @@
+.home {
+  height: 100%;
+  padding-top: 50vh;
+  overflow: hidden;
+  text-align: center;
+  align-items: center;
+  background-color: url(../img/model-1.jpg);
+  color: aqua;
+}/*# sourceMappingURL=home.css.map */

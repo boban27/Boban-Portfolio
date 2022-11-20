@@ -1,0 +1,170 @@
+@include  media-md{
+    .menu-btn{
+        visibility: hidden;
+    }
+
+    
+    
+    .nav{
+
+        visibility: visible;
+       
+      
+       
+        .menu-nav{
+            display: block;
+            transform: translateY(0);
+            height: 100%;
+            background: transparent;
+            text-align: right;
+            
+            
+  
+
+           
+            &_item{
+                display: inline;
+                padding-right: 1.5rem;
+            }
+
+            &_link{
+                font-size: 1.5rem;
+                
+               
+            }
+        }
+    }
+    .home{
+     
+        
+
+        footer{
+            font-size: 2rem;
+        }
+        
+    }
+    .about_bio-image{
+        height: 100vh;
+    }
+    .about_bio{
+        font-size: 1.5rem;
+
+
+        p{
+            font-size: 1.7rem;
+        }
+        
+      
+    }
+
+    .project{
+        &_bio-image{
+            height: 100vh;
+
+
+        }
+        &_bio{
+            margin-bottom: px;
+            width: 80%;
+            p{
+                font-size: 1.7rem;
+            
+            }
+        }
+
+        &_items{
+            grid-template-columns: repeat(2,1fr);
+        }
+        .text-secondary{
+            font-size: 3rem;
+        }
+    }
+    .contact_list{
+        grid-template-columns: repeat(2,1fr);
+    }
+    
+    }
+    @include media-lg{
+       
+        .project{
+            &_items{
+                grid-template-columns: repeat(3 ,1fr);
+            }
+        }
+        .home{
+        
+            h2,h3{
+                font-size: 2rem;
+            }
+            &_name{
+                font-size: 6rem;
+            }
+    
+            footer{
+                font-size: 1rem;
+            }
+        }
+
+        .contact_list{
+            grid-template-columns: repeat(3,1fr);
+        }
+
+       
+
+        .about {
+
+            .mavbgcolor{
+                background-color: black;
+        
+            }
+
+
+
+        footer{
+            transform: 
+    rotate(0deg)
+    translate(-3rem,-1rem);
+            
+        }
+         .socila-icon{
+            display: flex;
+            flex-direction: row;
+            a{
+                padding: 1rem;
+                }
+        } 
+    }
+
+    .project footer{
+            transform: 
+    rotate(0deg)
+    translate(-3rem,-1rem);
+    }
+    .project .socila-icon{
+        display: flex;
+        flex-direction: row;
+
+        a{
+            padding: 1rem;
+        }    
+    }
+        
+    }
+    
+@include media-xl{
+
+    
+    .project{
+    &_bio-image{
+        height: 80vh;
+    }
+}
+.about_bio{
+&_bio-image{
+    height: 80vh;
+
+}
+}
+
+
+}
